@@ -4,7 +4,7 @@ import { RecoilRoot } from "recoil";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
-    <SessionProvider session={session} refetchInterval={5 * 60}>
+    <SessionProvider session={session}>
       <RecoilRoot>
         <Component {...pageProps} />
       </RecoilRoot>
