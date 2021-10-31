@@ -13,7 +13,7 @@ function Search({ search, setSearch }) {
       />
 
       <div className="flex items-center divide-dotted divide-x-2 divide-[#333333]">
-        <div className="hidden md:flex space-x-2 pr-5">
+        <div className="flex space-x-2 pr-5">
           <button className="tag">Minimal</button>
           <button className="tag">House</button>
           <button className="tag">Minimal</button>
