@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+@layer base {
+  body {
+    @apply font-body bg-black;
+  }
+}
+
+@layer components {
+  .sidebarIcon {
+    @apply h-6 text-[#808080] cursor-pointer;
+  }
+
+  .tag {
+    @apply py-1.5 px-3 text-[#CECECE] bg-[#282828] rounded-xl text-xs font-bold border-2 border-[#484848];
+  }
+
+  .genre {
+    @apply bg-[#101010] text-[#CECECE] border border-[#484848] rounded-xl p-2 text-xs font-bold cursor-default;
+  }
+
+  .posterImg {
+    @apply h-32 w-32 object-cover rounded-md;
+  }
+
+  .filterImg {
+    filter: invert(100%) sepia(0%) saturate(6903%) hue-rotate(8deg)
+      brightness(88%) contrast(80%);
+  }
+
+  .icon {
+    @apply hover:scale-125 transition-all duration-150 ease-out;
+  }
+}
