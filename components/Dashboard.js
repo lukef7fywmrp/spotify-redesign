@@ -33,7 +33,7 @@ function Dashboard() {
   }, [accessToken]);
 
   return (
-    <main className="flex min-h-screen md:min-w-max bg-black pb-24">
+    <main className="flex min-h-screen min-w-max bg-black pb-24">
       <Sidebar />
       <Body chooseTrack={chooseTrack} spotifyApi={spotifyApi} />
       <Right chooseTrack={chooseTrack} spotifyApi={spotifyApi} />
