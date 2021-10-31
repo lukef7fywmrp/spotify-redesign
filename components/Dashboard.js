@@ -39,7 +39,7 @@ function Dashboard() {
       <Right chooseTrack={chooseTrack} spotifyApi={spotifyApi} />
 
       {showPlayer && (
-        <div className="fixed bottom-0 left-0 right-0">
+        <div className="fixed bottom-0 left-0 right-0 z-50">
           <Player accessToken={accessToken} trackUri={playingTrack.uri} />
         </div>
       )}

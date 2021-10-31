@@ -32,7 +32,7 @@ function Right({ chooseTrack, spotifyApi }) {
   }, [accessToken]);
 
   return (
-    <section className="p-4 space-y-8 h-96 pr-8">
+    <section className="p-4 space-y-8 pr-8">
       <div className="flex space-x-2.5 items-center justify-between">
         {/* Icons */}
         <div className="flex items-center space-x-3 border-2 border-[#262626] rounded-full py-3 px-4">

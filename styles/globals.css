@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply font-body bg-black;
+    @apply font-body bg-black scrollbar-hide;
   }
 }
 
@@ -21,15 +21,6 @@
 
   .genre {
     @apply bg-[#101010] text-[#CECECE] border border-[#484848] rounded-xl p-2 text-xs font-bold cursor-default;
-  }
-
-  .posterImg {
-    @apply h-32 w-32 object-cover rounded-md;
-  }
-
-  .filterImg {
-    filter: invert(100%) sepia(0%) saturate(6903%) hue-rotate(8deg)
-      brightness(88%) contrast(80%);
   }
 
   .icon {
