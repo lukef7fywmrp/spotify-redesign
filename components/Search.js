@@ -12,7 +12,7 @@ function Search({ search, setSearch }) {
         placeholder="Search Songs/Artists"
       />
 
-      <div className="flex items-center divide-dotted divide-x-2 divide-[#333333]">
+      <div className="flex items-center divide-dotted divide-x-2 divide-[#333333] ml-auto">
         <div className="flex space-x-2 pr-5">
           <button className="tag">Minimal</button>
           <button className="tag">House</button>
