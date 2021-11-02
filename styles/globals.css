@@ -26,4 +26,12 @@
   .icon {
     @apply hover:scale-125 transition-all duration-150 ease-out;
   }
+
+  .croppedIcon {
+    clip-path: inset(0 50% 0 0);
+  }
+
+  .playerIcon {
+    @apply transition ease-out transform hover:scale-105 hover:text-white;
+  }
 }

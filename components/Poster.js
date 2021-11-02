@@ -30,7 +30,7 @@ function Poster({ track, chooseTrack }) {
           {track.uri === playingTrack.uri && play ? (
             <BsFillPauseFill className="text-white text-xl" />
           ) : (
-            <BsFillPlayFill className="text-white text-xl" />
+            <BsFillPlayFill className="text-white text-xl ml-[1px]" />
           )}
         </div>
 
