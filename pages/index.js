@@ -24,7 +24,7 @@ export default function Home() {
         <title>Spotify - Dashboard</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Loader />
+      <Dashboard />
     </div>
   );
 }

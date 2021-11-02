@@ -29,7 +29,7 @@ function Player({ accessToken, trackUri }) {
   return (
     <>
       {/* Free Users */}
-      <div className="bg-[#181818] flex items-center justify-between px-5 py-2.5 rounded-t-2xl relative space-x-20 md:space-x-0 overflow-x-scroll md:overflow-x-hidden scrollbar-hide">
+      {/* <div className="bg-[#181818] flex items-center justify-between px-5 py-2.5 rounded-t-2xl relative space-x-20 md:space-x-0 overflow-x-scroll md:overflow-x-hidden scrollbar-hide">
         <div className="flex items-center">
           <img
             src={playingTrack.albumUrl}
@@ -45,7 +45,7 @@ function Player({ accessToken, trackUri }) {
             </h5>
           </div>
         </div>
-        {/* Controls */}
+        Controls
         <div className="flex flex-col space-y-2 items-center md:absolute inset-x-auto w-full">
           <div className="flex items-center text-[#b3b3b3] text-xl space-x-4">
             <BiShuffle className="text-lg playerIcon" />
@@ -63,7 +63,7 @@ function Player({ accessToken, trackUri }) {
             <h4 className="-mt-0.5">0:00</h4>
           </div>
         </div>
-        {/* Icons */}
+        Icons
         <div className="text-[#b3b3b3] flex items-center space-x-3">
           <RiPlayList2Fill className="playerIcon" />
           <div className="flex items-center playerIcon">
@@ -78,10 +78,10 @@ function Player({ accessToken, trackUri }) {
           </div>
           <CgArrowsExpandRight className="playerIcon" />
         </div>
-      </div>
+      </div> */}
 
       {/* Premium Users */}
-      {/* <SpotifyPlayer
+      <SpotifyPlayer
         styles={{
           activeColor: "#fff",
           bgColor: "#181818",
@@ -105,7 +105,7 @@ function Player({ accessToken, trackUri }) {
         uris={trackUri ? [trackUri] : []}
         magnifySliderOnHover={true}
         autoPlay={true}
-      /> */}
+      />
     </>
   );
 }
