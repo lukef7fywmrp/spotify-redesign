@@ -2,10 +2,10 @@ import { HiOutlineShieldCheck } from "react-icons/hi";
 import { MdOutlineSettings } from "react-icons/md";
 import { BiBell } from "react-icons/bi";
 import { ViewGridIcon } from "@heroicons/react/solid";
-import Profile from "./Profile";
 import Dropdown from "./Dropdown";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
+import RecentlyPlayed from "./RecentlyPlayed";
 
 function Right({ chooseTrack, spotifyApi }) {
   const { data: session } = useSession();
@@ -33,9 +33,9 @@ function Right({ chooseTrack, spotifyApi }) {
 
   return (
     <section className="p-4 space-y-8 pr-8">
-      <div className="flex space-x-2.5 items-center justify-between">
+      <div className="flex space-x-2 items-center justify-between">
         {/* Icons */}
-        <div className="flex items-center space-x-3 border-2 border-[#262626] rounded-full py-3 px-4">
+        <div className="flex items-center space-x-4 border-2 border-[#262626] rounded-full h-12 py-3 px-4">
           <HiOutlineShieldCheck className="text-[#CCCCCC] text-xl" />
           <MdOutlineSettings className="text-[#CCCCCC] text-xl" />
           <div>
@@ -55,10 +55,14 @@ function Right({ chooseTrack, spotifyApi }) {
 
         <div className="space-y-4 overflow-y-scroll overflow-x-hidden h-[250px] md:h-[400px] scrollbar-hide">
           {recentlyPlayed.map((track, index) => (
-            <Profile key={index} track={track} chooseTrack={chooseTrack} />
+            <RecentlyPlayed
+              key={index}
+              track={track}
+              chooseTrack={chooseTrack}
+            />
           ))}
         </div>
-        <button className="text-[#CECECE] bg-[#383838] text-[13px] py-3 px-4 rounded-2xl w-full font-bold">
+        <button className="text-[#CECECE] bg-[#383838] text-[13px] py-3 px-4 rounded-2xl w-full font-bold bg-opacity-75 hover:bg-opacity-100 transition ease-out">
           View All
         </button>
       </div>

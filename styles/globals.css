@@ -20,7 +20,7 @@
   }
 
   .genre {
-    @apply bg-[#101010] text-[#CECECE] border border-[#484848] rounded-xl p-2 text-xs font-bold cursor-default;
+    @apply bg-[#101010] text-[#CECECE] border border-[#484848] rounded-xl py-2.5 px-3.5 text-[11px] font-bold cursor-default;
   }
 
   .icon {

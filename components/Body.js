@@ -1,6 +1,6 @@
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
-import Playlist from "./Playlist";
+import Poster from "./Poster";
 import Search from "./Search";
 import Track from "./Track";
 
@@ -49,7 +49,6 @@ function Body({ chooseTrack, spotifyApi }) {
     spotifyApi.getNewReleases().then((res) => {
       setNewReleases(
         res.body.albums.items.map((track) => {
-          console.log(track);
           return {
             id: track.id,
             artist: track.artists[0].name,
@@ -70,7 +69,7 @@ function Body({ chooseTrack, spotifyApi }) {
           ? newReleases
               .slice(0, 4)
               .map((track) => (
-                <Playlist
+                <Poster
                   key={track.id}
                   track={track}
                   chooseTrack={chooseTrack}
@@ -79,7 +78,7 @@ function Body({ chooseTrack, spotifyApi }) {
           : searchResults
               .slice(0, 4)
               .map((track) => (
-                <Playlist
+                <Poster
                   key={track.id}
                   track={track}
                   chooseTrack={chooseTrack}
@@ -89,7 +88,7 @@ function Body({ chooseTrack, spotifyApi }) {
 
       <div className="flex gap-x-8 absolute min-w-full md:relative ml-6">
         {/* Genres */}
-        <div className="hidden xl:inline max-w-[260px]">
+        <div className="hidden xl:inline max-w-[270px]">
           <h2 className="text-white font-bold mb-3">Genres</h2>
           <div className="flex gap-x-2 gap-y-2.5 flex-wrap mb-3">
             <div className="genre">Classic</div>
@@ -102,13 +101,13 @@ function Body({ chooseTrack, spotifyApi }) {
             <div className="genre">Country</div>
             <div className="genre">Techno</div>
           </div>
-          <button className="text-[#CECECE] bg-[#1A1A1A] text-[13px] py-3.5 px-4 rounded-2xl w-full font-bold">
+          <button className="text-[#CECECE] bg-[#1A1A1A] text-[13px] py-3.5 px-4 rounded-2xl w-full font-bold bg-opacity-80 hover:bg-opacity-100 transition ease-out">
             All Genres
           </button>
         </div>
 
         {/* Tracks */}
-        <div className="w-full pr-12">
+        <div className="w-full pr-11">
           <h2 className="text-white font-bold mb-3">
             {searchResults.length === 0 ? "New Releases" : "Tracks"}
           </h2>

@@ -2,7 +2,7 @@ import { BsFillPauseFill, BsFillPlayFill } from "react-icons/bs";
 import { useRecoilState } from "recoil";
 import { playingTrackState, playState } from "../atoms/playerAtom";
 
-function Playlist({ track, chooseTrack }) {
+function Poster({ track, chooseTrack }) {
   const [play, setPlay] = useRecoilState(playState);
   const [playingTrack, setPlayingTrack] = useRecoilState(playingTrackState);
 
@@ -43,4 +43,4 @@ function Playlist({ track, chooseTrack }) {
   );
 }
 
-export default Playlist;
+export default Poster;

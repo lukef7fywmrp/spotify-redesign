@@ -1,7 +1,7 @@
 import { useRecoilState } from "recoil";
 import { playingTrackState, playState } from "../atoms/playerAtom";
 
-function Profile({ track, chooseTrack }) {
+function RecentlyPlayed({ track, chooseTrack }) {
   const [play, setPlay] = useRecoilState(playState);
   const [playingTrack, setPlayingTrack] = useRecoilState(playingTrackState);
 
@@ -32,4 +32,4 @@ function Profile({ track, chooseTrack }) {
   );
 }
 
-export default Profile;
+export default RecentlyPlayed;
