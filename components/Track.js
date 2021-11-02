@@ -1,8 +1,9 @@
-import { BsHeadphones, BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
+import { BsFillPlayFill, BsFillPauseFill } from "react-icons/bs";
 import { AiFillHeart } from "react-icons/ai";
 import { useState } from "react";
 import { useRecoilState } from "recoil";
 import { playingTrackState, playState } from "../atoms/playerAtom";
+import { ImHeadphones } from "react-icons/im";
 
 function Track({ track, chooseTrack }) {
   const [hasLiked, setHasLiked] = useState(false);
@@ -37,7 +38,7 @@ function Track({ track, chooseTrack }) {
 
       <div className="md:ml-auto flex items-center space-x-2.5">
         <div className="text-white flex space-x-1 text-sm font-semibold">
-          <BsHeadphones className="text-xl" />
+          <ImHeadphones className="text-lg" />
           <h4 className="font-sans">{track.popularity}</h4>
         </div>
         <div className="flex items-center rounded-full border-2 border-[#262626] w-[85px] h-10 relative cursor-pointer group-hover:border-white/40">
